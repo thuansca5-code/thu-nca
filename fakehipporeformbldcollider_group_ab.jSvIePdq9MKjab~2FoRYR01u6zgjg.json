@@ -1,0 +1,54 @@
+{
+  "version": "OB55",
+  "author": "ROCKET",
+  "features": {
+    "bone_modifier": {
+      "enabled": true,
+      "bones": {
+        "Bone_Hips": {
+          "target_bone": "Bone_Head",
+          "override_position": true,
+          "offset_y": 1.65
+        },
+        "Bone_LeftArm": {
+          "scale_x": 3.0,
+          "scale_y": 3.0,
+          "scale_z": 3.0,
+          "stretch": true
+        },
+        "Bone_Head": {
+          "scale_x": 5.5,
+          "scale_y": 5.5,
+          "scale_z": 5.5
+        },
+        "Bone_Chest": {
+          "scale_x": 0.1,
+          "scale_y": 0.1,
+          "scale_z": 0.1
+        }
+      }
+    },
+    "aim_assist": {
+      "enabled": true,
+      "snap_to_head": true,
+      "fov": 360,
+      "drag_speed": 1.5,
+      "smooth_factor": 0.0
+    },
+    "unlock_all": {
+      "enabled": true,
+      "get_backpack_hook": "GetBackpack",
+      "unlock_skins": true,
+      "unlock_weapons": true,
+      "unlock_characters": true,
+      "unlock_pets": true
+    }
+  },
+  "hooks": {
+    "GetBackpack": {
+      "return_value": "all_items",
+      "bypass_check": true,
+      "description": "Hook hàm GetBackpack để trả về toàn bộ item ID (Skin, Súng, Nhân vật) thay vì item đã sở hữu."
+    }
+  }
+}
